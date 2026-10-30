@@ -469,8 +469,8 @@ button,a{touch-action:manipulation}
 
 .pf{
   display:grid;
-  grid-template-columns:minmax(0,1fr);
-  gap:0;
+  grid-template-columns:200px minmax(0,1fr);
+  gap:32px;
   background:var(--cd);
   border:1px solid var(--ln)!important;
   border-radius:14px;
@@ -481,6 +481,21 @@ button,a{touch-action:manipulation}
 }
 .pf:hover{
   border-color:var(--ln);
+  box-shadow:var(--sh-md);
+}
+.pf img{
+  width:200px;
+  height:240px;
+  object-fit:cover;
+  object-position:top;
+  border-radius:10px;
+  border:1px solid var(--ln);
+  box-shadow:var(--sh-sm);
+  transition:transform .35s cubic-bezier(0.16,1,0.3,1),box-shadow .35s ease;
+  background:var(--alt);
+}
+.pf:hover img{
+  transform:scale(1.02);
   box-shadow:var(--sh-md);
 }
 .pf h2{
@@ -633,6 +648,10 @@ footer p{max-width:920px;margin:0 0 10px;font-style:normal}
     padding:20px;
     gap:20px;
   }
+  .pf img{
+    width:100%;
+    height:250px;
+  }
   .st{
     grid-template-columns:1fr;
     gap:12px;
@@ -651,6 +670,7 @@ footer p{max-width:920px;margin:0 0 10px;font-style:normal}
   .g,.g[style]{grid-template-columns:minmax(0,1fr)!important;gap:14px}
   .cd{padding:20px 18px}
   .pf{padding:16px;gap:16px}
+  .pf img{height:auto;max-height:300px;aspect-ratio:4 / 3}
   .pf h2{font-size:clamp(22px,6vw,25px)}
   .st{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:12px}
   .st b{font-size:clamp(20px,6vw,24px);overflow-wrap:anywhere}
@@ -720,7 +740,7 @@ footer p{max-width:920px;margin:0 0 10px;font-style:normal}
 
 <div class="pg" id="about"><div class="hero"><div class="w"><h1>Team</h1></div></div>
 <div class="w">
-<div class="pf"><div><div class="k">Leadership</div><h2>Diwakar Rana, MRICS</h2><div class="c">NISM Certified AIF Cat 1 and Cat 2 Manager</div><p><a href="https://www.linkedin.com/in/diwakar-rana-2299298/" target="_blank" rel="noopener noreferrer" style="font-weight:600;font-size:14px;text-decoration:none">LinkedIn →</a></p>
+<div class="pf"><img alt="Diwakar Rana" src="images/diwakar-rana.png"><div><div class="k">Leadership</div><h2>Diwakar Rana, MRICS</h2><div class="c">NISM Certified AIF Cat 1 and Cat 2 Manager</div><p><a href="https://www.linkedin.com/in/diwakar-rana-2299298/" target="_blank" rel="noopener noreferrer" style="font-weight:600;font-size:14px;text-decoration:none">LinkedIn →</a></p>
 <p><b>Core capabilities:</b> Capital markets · Town planning · Investment banking · Real-estate finance</p>
 <p>Town-planning training provides a practical understanding of design, zoning, development controls and micro-market dynamics. Since 2006, has evaluated and advised institutional investments across PE, private credit, onshore and offshore capital, asset classes and market cycles.</p>
 <div class="st"><div><b>₹9,000+ cr</b>Deal value</div><div><b>50+</b>Transactions executed</div><div><b>25+ yrs</b>Across market cycles</div></div>
@@ -728,7 +748,7 @@ footer p{max-width:920px;margin:0 0 10px;font-style:normal}
 <p><b>Qualifications:</b> PGDBM, IMT Ghaziabad · B.Tech Town Planning, School of Planning &amp; Architecture, Delhi</p>
 <div class="dg">Historical experience is attributable to the relevant individual in prior roles and is not Fund performance.</div></div></div>
 
-<div class="pf"><div><div class="k">Leadership</div><h2>Amit Chaudhary</h2><div class="c">Fintech · Credit · Debt syndication · Lending · Stressed assets · Real-asset development</div><p><a href="https://www.linkedin.com/in/amit-chaudhary-381b8242/" target="_blank" rel="noopener noreferrer" style="font-weight:600;font-size:14px;text-decoration:none">LinkedIn →</a></p>
+<div class="pf"><img alt="Amit Chaudhary" src="images/amit-chaudhary.png"><div><div class="k">Leadership</div><h2>Amit Chaudhary</h2><div class="c">Fintech · Credit · Debt syndication · Lending · Stressed assets · Real-asset development</div><p><a href="https://www.linkedin.com/in/amit-chaudhary-381b8242/" target="_blank" rel="noopener noreferrer" style="font-weight:600;font-size:14px;text-decoration:none">LinkedIn →</a></p>
 <p><b>Core capabilities:</b> Mortgage credit · Debt syndication · Stressed assets · Fintech · Underwriting · Real-estate development</p>
 <p>Built experience from mortgage credit and SME structuring through stressed-asset resolution, project finance, NCDs and LAP. Later scaled debt origination at Indiabulls Housing Finance and built digital mortgage-distribution platforms connecting lenders and channel partners.</p>
 <div class="st"><div><b>₹2,800 cr p.a.</b>Debt origination at Indiabulls; gross NPA &lt;0.3%</div><div><b>1,500+</b>Channel partners onboarded</div><div><b>25+ yrs</b>Across market cycles</div></div>
@@ -736,7 +756,7 @@ footer p{max-width:920px;margin:0 0 10px;font-style:normal}
 <p><b>Qualifications:</b> Advanced Program, FinTech &amp; Financial Blockchain, IIM Calcutta · PGDBM, IMT Ghaziabad · B.Pharm, Delhi University</p>
 <div class="dg">Historical experience is attributable to the relevant individual in prior roles and is not Fund performance.</div></div></div>
 
-<div class="pf" style="border:0"><div><div class="k">Industry expert advisor</div><h2>Jogy Thomas, MRICS, FCA</h2><div class="c">Independent operating and investment perspective</div><p><a href="https://www.linkedin.com/in/jogy-p-thomas/" target="_blank" rel="noopener noreferrer" style="font-weight:600;font-size:14px;text-decoration:none">LinkedIn →</a></p>
+<div class="pf" style="border:0"><img alt="Jogy Thomas" src="images/jogy-thomas.jpg"><div><div class="k">Industry expert advisor</div><h2>Jogy Thomas, MRICS, FCA</h2><div class="c">Independent operating and investment perspective</div><p><a href="https://www.linkedin.com/in/jogy-p-thomas/" target="_blank" rel="noopener noreferrer" style="font-weight:600;font-size:14px;text-decoration:none">LinkedIn →</a></p>
 <p><b>Core capabilities:</b> Development · Real-estate finance · Private capital · Investments · Board governance</p>
 <p>Senior operator and investment professional with experience spanning real-estate development, finance, facility management, SPV directorships and South Asia real-estate and hospitality investments. Specialist in distressed asset revival and fund exits.</p>
 <div class="st"><div><b>20+ yrs</b>Real-estate experience</div><div><b>6 yrs</b>Hedge-fund experience</div></div>
