@@ -731,14 +731,28 @@ footer p{max-width:920px;margin:0 0 10px;font-style:normal}
 @media(max-width:390px){
   header .w{gap:8px;min-height:62px}
   header.sc .w{min-height:58px}
-  .logo{gap:8px}
-  .brand-img{height:32px}
+  .logo{gap:8px;min-width:0}
+  .brand-img{height:32px;flex:0 0 auto}
+  .lt{min-width:0}
   .lt strong{font-size:14px;letter-spacing:.09em}
   #th button{width:24px;height:32px}
   #th{gap:1px}
   #mb{width:34px;height:36px;flex:0 0 34px}
   .w{padding-inline:14px}
   .st{grid-template-columns:minmax(0,1fr)}
+}
+
+@media(max-width:320px){
+  header .w{gap:6px}
+  .logo{gap:6px}
+  .brand-img{height:28px}
+  .lt strong{font-size:12px;letter-spacing:.07em}
+  #th button{width:22px}
+  #mb{width:32px;flex-basis:32px}
+  .w{padding-inline:12px}
+  h1{font-size:28px}
+  .cd{padding:18px 16px}
+  #md>div{padding:22px 16px}
 }
 
 @media(prefers-reduced-motion:reduce){
